@@ -1,6 +1,7 @@
 
 let click2;
 let click1;
+let jogadas;
 
 //Quantificação de cartas solicitadas
 let quantidadeCards = Number(prompt("Com quantas cartas você quer jogar?"));
@@ -72,14 +73,13 @@ function virar(elemento) {
         
         if (click1 === click2) {
             console.log("São iguais, mantenha a carta virada");
-            delete click1
-            delete click2
-            console.log(click1)
+            click1=undefined
+            click2=undefined
         }
         else {
             console.log("Diferentes, desvire as cartas")
-            delete click1
-            delete click2
+            click1=undefined
+            click2=undefined
         }
     }
     
