@@ -54,7 +54,7 @@ function virar(elemento) {
     console.log(elemento);
 
     if (click1 === undefined) {
-        
+        let elemento1 = elemento
         let imagemDetras = elemento.querySelector(".back-face");
 
         
@@ -63,8 +63,10 @@ function virar(elemento) {
 
         click1 = imagemDetras.src;
         jogadas=jogadas + 1
+       
     }
     else {
+        let elemento2 = elemento
         let imagemDetras = elemento.querySelector(".back-face");
 
         
@@ -79,12 +81,18 @@ function virar(elemento) {
             click1=undefined
             click2=undefined
             cartasCertas= cartasCertas+1 
+
            
         }
         else {
             console.log("Diferentes, desvire as cartas")
+            elemento1.querySelector(".front-face").classList.remove("rodar-front-face");
+            elemento1.querySelector(".back-face").classList.remove("desrodar-back-face");
+            elemento2.querySelector(".front-face").classList.remove("rodar-front-face");
+            elemento2.querySelector(".back-face").classList.remove("desrodar-back-face");
             click1=undefined
             click2=undefined
+
         } 
         if(quantidadeCards==cartasCertas){
                 alert(`Você ganhou em ${jogadas} jogadas!`)
