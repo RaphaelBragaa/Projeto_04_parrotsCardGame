@@ -52,6 +52,7 @@ function gerarCartas() {
 gerarCartas();
 //Invocação da cartas solicitadas
 
+//Checagem de acertos e erros, resultado final
 function virar(elemento) {
     console.log(elemento);
 
@@ -82,24 +83,26 @@ function virar(elemento) {
             console.log("São iguais, mantenha a carta virada");
             click1=undefined
             click2=undefined
-            cartasCertas= cartasCertas+1 
+            cartasCertas= cartasCertas+2 
 
-           
+           if(quantidadeCards==cartasCertas){
+                alert(`Você ganhou em ${jogadas} jogadas!`)
+            }
         }
         else {
             console.log("Diferentes, desvire as cartas")
+            setTimeout(function(){
             elemento1.querySelector(".front-face").classList.remove("rodar-front-face");
             elemento1.querySelector(".back-face").classList.remove("desrodar-back-face");
             elemento2.querySelector(".front-face").classList.remove("rodar-front-face");
             elemento2.querySelector(".back-face").classList.remove("desrodar-back-face");
             click1=undefined
             click2=undefined
-
+                }, 1000);
         } 
-        if(quantidadeCards==cartasCertas){
-                alert(`Você ganhou em ${jogadas} jogadas!`)
-            }
+        
     }
+    //Checagem de acertos e erros, resultado final
     
 
 }
