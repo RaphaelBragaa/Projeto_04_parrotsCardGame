@@ -3,6 +3,8 @@ let click2;
 let click1;
 let jogadas=0;
 let cartasCertas=0;
+let elemento1;
+let elemento2;
 
 //Quantificação de cartas solicitadas
 let quantidadeCards = Number(prompt("Com quantas cartas você quer jogar?"));
@@ -54,7 +56,7 @@ function virar(elemento) {
     console.log(elemento);
 
     if (click1 === undefined) {
-        let elemento1 = elemento
+         elemento1 = elemento
         let imagemDetras = elemento.querySelector(".back-face");
 
         
@@ -66,7 +68,7 @@ function virar(elemento) {
        
     }
     else {
-        let elemento2 = elemento
+         elemento2 = elemento
         let imagemDetras = elemento.querySelector(".back-face");
 
         
