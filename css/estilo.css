@@ -6,6 +6,9 @@ header{
 .title{
     display: flex;
     justify-content: center;
+    font-size: 56px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 .card {
     width: 200px;
