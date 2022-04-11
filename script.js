@@ -1,7 +1,8 @@
 
 let click2;
 let click1;
-let jogadas;
+let jogadas=0;
+let cartasCertas=0;
 
 //Quantificação de cartas solicitadas
 let quantidadeCards = Number(prompt("Com quantas cartas você quer jogar?"));
@@ -61,6 +62,7 @@ function virar(elemento) {
         imagemDetras.classList.add("desrodar-back-face");
 
         click1 = imagemDetras.src;
+        jogadas=jogadas + 1
     }
     else {
         let imagemDetras = elemento.querySelector(".back-face");
@@ -70,17 +72,23 @@ function virar(elemento) {
         imagemDetras.classList.add("desrodar-back-face");
 
         click2 = imagemDetras.src;
-        
+        jogadas=jogadas + 1
+
         if (click1 === click2) {
             console.log("São iguais, mantenha a carta virada");
             click1=undefined
             click2=undefined
+            cartasCertas= cartasCertas+1 
+           
         }
         else {
             console.log("Diferentes, desvire as cartas")
             click1=undefined
             click2=undefined
-        }
+        } 
+        if(quantidadeCards==cartasCertas){
+                alert(`Você ganhou em ${jogadas} jogadas!`)
+            }
     }
     
 
