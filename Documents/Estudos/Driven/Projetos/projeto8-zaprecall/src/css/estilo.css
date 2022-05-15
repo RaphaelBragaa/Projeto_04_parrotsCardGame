@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Recursive:wght@300;400;500;600;700&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
 
 
 * {
@@ -9,10 +10,23 @@
 
 @media (max-width: 767px) {
     body {
-        align-items: center;
+        display: flex;
+        justify-content: center;
         width: 100%;
     }
-
+    .hidden{
+        display: none;
+    }
+    .margint{
+        margin-top: 20px;
+    }
+    .marginl{
+        margin-left: 8px;
+    }
+    .marginr{
+        margin-right: 8px;
+    }
+    /* TELA 1 */
     .tela1{
         display: flex;
         flex-direction: column;
@@ -24,7 +38,7 @@
         margin: auto;
         height: 430px;
         width:350px;
-        border: 2px solid black;
+        font-family: 'Righteous';
     }
     .logo{
         margin:auto;
@@ -32,9 +46,81 @@
     }
 
     h1{
-        font-family: 'Righteous';
         font-size: 55px;
         color: white;
+        margin-top: 10px;
     }
+
+    .start{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        margin-top: 30px;
+        background-color: white;
+        color: #D70900;
+        font-size: 18px;
+        font-family: 'Recursive', sans-serif;
+        border-radius: 5px;
+        border:2px solid #D70900;
+    }
+    /* TELA 1 */
+
+    .tela2{
+        margin-left: 49px;
+        height: 100%;
+        font-family: 'Righteous';
+    }
+    .sublogo{
+        margin-right: 35px;
+        margin-left: 12px;
+        height: 5rem;
+    }
+    .fachada{
+        display:flex;
+        margin-top: 65px;
+        margin-bottom:50px ;
+    }
+
+    .question{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 475px;
+        min-height: 6rem;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    h3{
+        background-color: white;
+        font-size: 18px;
+    }
+
+    .icon{
+        background-color: white;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 565px;
+        background-color: white;
+        font-family: Recursive;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+    .yellow{
+        background-color: #FFFFD4;
+        ;
+    }
+
 	
 }
